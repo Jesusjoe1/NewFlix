@@ -1,0 +1,391 @@
+<html><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Newflix Movie Production</title>
+    <style>
+    :root {
+        --primary-color: #E50914;
+        --secondary-color: #221F1F;
+        --text-color: #FFFFFF;
+        --accent-color: #F5F5F1;
+    }
+    
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+    
+    body {
+        font-family: 'Arial', sans-serif;
+        line-height: 1.6;
+        color: var(--text-color);
+        background-color: var(--secondary-color);
+    }
+    
+    .container {
+        width: 90%;
+        margin: auto;
+        overflow: hidden;
+        padding: 0 20px;
+    }
+    
+    header {
+        background: var(--primary-color);
+        padding: 1rem 0;
+        width: 100%;
+        position: relative;
+        top: 0;
+        z-index: 1000;
+    }
+    
+    .logo {
+        color: var(--text-color);
+        font-size: 1.5rem;
+        font-weight: bold;
+        text-decoration: none;
+    }
+    
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    nav ul {
+        display: flex;
+        list-style-type: none;
+    }
+    
+    nav ul li {
+        padding: 0 10px;
+    }
+    
+    nav ul li a {
+        color: var(--text-color);
+        text-decoration: none;
+        font-weight: bold;
+        transition: 0.3s ease;
+    }
+    
+    nav ul li a:hover {
+        color: var(--accent-color);
+    }
+    
+    #showcase {
+        background: url(images/img16.png) repeat center center/cover;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        text-align: center;
+    }
+    
+    #showcase .showcase-content {
+        margin-top: 50px;
+    }
+
+    .showcase-content{
+        background: rgba(0,0,0,0.4);
+        width: max-content;
+        padding: 10px;
+        margin-top: 900px;
+    }
+    
+    #showcase h1 {
+        font-size: 4rem;
+        margin-bottom: 3px;
+    }
+    
+    .btn {
+        display: inline-block;
+        background: var(--primary-color);
+        color: var(--text-color);
+        padding: 0.8rem 1.5rem;
+        border: none;
+        cursor: pointer;
+        font-size: 1rem;
+        border-radius: 5px;
+        transition: opacity 0.2s ease-in;
+        text-decoration: none;
+    }
+    
+    .btn:hover {
+        opacity: 0.9;
+    }
+    
+    #about {
+        padding: 50px 0;
+        background: var(--secondary-color);
+    }
+    
+    #gallery {
+        padding: 50px 0;
+        background: var(--accent-color);
+    }
+    
+    .gallery-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        grid-gap: 20px;
+        padding: 20px 0;
+    }
+    
+    .gallery-item {
+        position: relative;
+        overflow: hidden;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    
+    .gallery-item img, .gallery-item video {
+        width: 100%;
+        height: auto;
+        display: block;
+        transition: transform 0.3s ease;
+    }
+    
+    .gallery-item:hover img, .gallery-item:hover video {
+        transform: scale(1.1);
+    }
+    
+    #social {
+        padding: 50px 0;
+        background: var(--secondary-color);
+        text-align: center;
+    }
+    
+    .social-icons {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+        background: #F5F5F1;
+    }
+    
+    .social-icons a {
+        color: var(--text-color);
+        margin: 0 10px;
+        font-size: 1.5rem;
+        transition: color 0.3s ease;
+        padding: 5px;
+    }
+    
+    .social-icons a:hover {
+        color: var(--primary-color);
+    }
+
+    .icn {
+            width: 30px;
+        }
+    
+    footer {
+        background: var(--primary-color);
+        color: var(--text-color);
+        text-align: center;
+        padding: 20px 0;
+    }
+    
+    @media(max-width: 768px) {
+        nav ul {
+            display: none;
+        }
+    
+    #showcase h1 {
+        font-size: 3rem;
+        margin-bottom: 3px;
+    }
+        
+        #showcase {
+             background: url(images/img6.jpg) repeat center center/cover;
+       
+        }
+        
+
+    .showcase-content{
+        background: none;
+        margin-left: 50px;
+
+    }
+        #showcase h1 {
+            font-size: 2.5rem;
+        }
+    
+        .gallery-container {
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        }
+    }
+    </style>
+    <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <header>
+            <div class="container">
+                <nav>
+                    <h1><a href="#" class="logo">Newflix.ios</a></h1>
+                    <ul>
+                        <li><a href="#showcase">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#gallery">Gallery</a></li>
+                        <li><a href="#social">Connect</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+    
+        <section id="showcase">
+            <div class="container">
+                <div class="showcase-content">
+                    <h1>Welcome to Newflix</h1>
+                    <p>Bringing your stories to life through cinematic excellence</p> 
+                    <a href="#about" class="btn">Learn More</a>
+                </div>
+            </div>
+        </section>
+    
+        <section id="about">
+            <div class="container">
+                <h2>About Us</h2>
+                <p>Newflix is a cutting-edge movie production company dedicated to creating compelling narratives and visually stunning experiences. Our team of passionate filmmakers, writers, and technicians work tirelessly to bring imaginative stories to the big screen.</p>
+                <p>With a focus on innovation and creativity, we strive to push the boundaries of cinematic storytelling, delivering unforgettable entertainment to audiences worldwide.</p>
+            </div>
+        </section>
+    
+        <section id="gallery">
+            <div class="container">
+                <h2>Our Work</h2>
+                <div class="gallery-container">
+                    <div class="gallery-item">
+                        <img src="images/img13.jpg" alt="Scene from action movie with explosions" width="400" height="300">
+                    </div>
+                   
+                    <div class="gallery-item">
+                        <img src="images/img11.png" alt="Behind the scenes of a romantic comedy" width="400" height="300">
+                    </div>
+                   
+                    <div class="gallery-item">
+                        <img src="images/img12.png" alt="Poster for upcoming sci-fi thriller" width="400" height="300">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/img10.jpg" alt="Directors and crew on set" width="400" height="300">
+                    </div> 
+                    <div class="gallery-item">
+                        <video width="400" height="300" controls>
+                            <source src="video/VID-20240803-WA0012.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <div class="gallery-item">
+                        <video width="400" height="300" controls>
+                            <source src="video/VID-20240803-WA0019.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    
+        <section id="social">
+            <div class="container">
+                <h2>Connect With Us</h2>
+                <p>Stay updated with our latest projects and behind-the-scenes content:</p>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/newflix.ios?igsh=OGQ5ZDc2ODk2ZA%3D%3D&utm_source=qr" target="_blank"><img src="images/instagram.png" class="icn" alt=""></a>
+                    <a href="https://t.me/+FI7Dq0KI1FwzM2Vk" target="_blank"><img src="images/telegram.png" class="icn" alt=""></a>
+                    <a href="https://whatsapp.com/channel/0029VafUgmmBVJkzRQapJ50Q" target="_blank"><img src="images/whatsapp.png" class="icn" alt=""></a>
+                    <a href="https://www.tiktok.com/@newflix9?_t=8oLE2j80GQP&_r=1" target="_blank"><img src="images/tik-tok.png" class="icn" alt=""></a>
+                    <a href="https://youtube.com/@newflix_os?si=MzL9QET65mtE8XYT" target="_blank"><img src="images/youtube.png" class="icn" alt=""></a>
+                    <a href="https://www.facebook.com/profile.php?id=100085870221354&mibextid=LQQJ4d" target="_blank"><img src="images/facebook.png" class="icn" alt=""></a>
+                
+                </div>
+            </div>
+        </section>
+    
+        <footer>
+            <div class="container">
+                <p>&copy; 2023 Newflix.ios Movie Production. All rights reserved.</p>
+            </div>
+        </footer>
+    
+        <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            // Smooth scrolling for navigation links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+    
+            // Lazy loading for images and videos
+            const lazyLoad = target => {
+                const io = new IntersectionObserver((entries, observer) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            const img = entry.target;
+                            const src = img.getAttribute('data-src');
+    
+                            if (img.tagName.toLowerCase() === 'img') {
+                                img.setAttribute('src', src);
+                            } else if (img.tagName.toLowerCase() === 'video') {
+                                img.setAttribute('src', src);
+                                img.load();
+                            }
+    
+                            observer.disconnect();
+                        }
+                    });
+                });
+    
+                io.observe(target);
+            };
+    
+            const lazyImages = document.querySelectorAll('[data-src]');
+            lazyImages.forEach(lazyLoad);
+    
+            // Responsive navigation menu
+            const navToggle = document.createElement('button');
+            navToggle.textContent = '☰';
+            navToggle.style.cssText = `
+                background: none;
+                border: none;
+                color: white;
+                font-size: 1.5rem;
+                cursor: pointer;
+                display: none;
+            `;
+    
+            const nav = document.querySelector('nav');
+            nav.appendChild(navToggle);
+    
+            const navList = document.querySelector('nav ul');
+    
+            navToggle.addEventListener('click', () => {
+                navList.style.display = navList.style.display === 'flex' ? 'none' : 'flex';
+            });
+    
+            const mediaQuery = window.matchMedia('(max-width: 768px)');
+            function handleTabletChange(e) {
+                if (e.matches) {
+                    navToggle.style.display = 'block';
+                    navList.style.display = 'none';
+                    navList.style.flexDirection = 'column';
+                    navList.style.position = 'absolute';
+                    navList.style.top = '100%';
+                    navList.style.left = '0';
+                    navList.style.width = '100%';
+                    navList.style.background = 'var(--primary-color)';
+                } else {
+                    navToggle.style.display = 'none';
+                    navList.style.display = 'flex';
+                    navList.style.flexDirection = 'row';
+                    navList.style.position = 'static';
+                }
+            }
+            mediaQuery.addListener(handleTabletChange);
+            handleTabletChange(mediaQuery);
+        });
+        </script>
+    </body>
+    </html>
